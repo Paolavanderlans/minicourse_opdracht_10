@@ -1,0 +1,100 @@
+.container{
+    height: 100%;
+    border: 3px solid grey;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 150px 100px 50px;
+    grid-column-gap: 0px;
+    grid-row-gap: 3px;
+}
+.container > div{
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 0.9em;
+    color: white;
+}
+
+.header{
+    background-color: rgb(10, 176, 241);
+}
+.main{
+    background-color: rgb(66, 168, 66);
+}
+
+.widget-area{
+    background-color: rgb(219, 22, 219);
+}
+.footer{
+    background-color: rgb(24, 24, 206);
+}
+
+@media (min-width: 1024px){
+    .container{
+        height: 100%;
+        border: 3px solid grey;
+        display: grid;
+        grid-column-gap: 3px;
+        grid-row-gap: 3px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 300px 200px 100px;
+        grid-template-areas:
+            "h m m"
+            "h w w"
+            "h f f";
+    
+    }
+
+    .header{
+        background-color: rgb(10, 176, 241);
+        grid-area: h;
+    }
+    .main{
+        background-color: rgb(66, 168, 66);
+        grid-area: m;
+    }
+    
+    .widget-area{
+        background-color: rgb(219, 22, 219);
+        grid-area: w;
+    }
+    .footer{
+        background-color: rgb(24, 24, 206);
+        grid-area: f;
+    }
+}
+@media (min-width: 1150px){
+    .container{
+        height: 100%;
+        border: 3px solid grey;
+        display: grid;
+        grid-column-gap: 3px;
+        grid-row-gap: 3px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 300px 200px 100px;
+        grid-template-areas:
+            "h m w"
+            "h m w"
+            "h f w";
+    
+    }
+
+    .header{
+        background-color: rgb(10, 176, 241);
+        grid-area: h;
+    }
+    .main{
+        background-color: rgb(66, 168, 66);
+        grid-area: m;
+    }
+    
+    .widget-area{
+        background-color: rgb(219, 22, 219);
+        grid-area: w;
+    }
+    .footer{
+        background-color: rgb(24, 24, 206);
+        grid-area: f;
+    }
+
+}
+
